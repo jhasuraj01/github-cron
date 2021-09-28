@@ -6,7 +6,7 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "export": "next build && next export",
-    "postexport": "node rename-out-to-docs.js",
+    "postexport": "node optimize-for-github-pages.js",
     "start": "next start",
     "lint": "next lint"
   },
