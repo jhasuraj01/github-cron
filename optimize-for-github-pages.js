@@ -3,8 +3,6 @@ const path = require("path")
 
 const currPath = "./out"
 const newPath = "./docs"
-const _next = "_next"
-const next = "next"
 
 try {
     fs.rmdirSync(newPath, { recursive: true });
@@ -18,20 +16,8 @@ try {
     console.log(error)
 }
 
-try {
-    fs.renameSync(`${newPath}/_next`, `${newPath}/next`)
-} catch (error) {
-    console.log(error)
-}
-
-// try {
-//     let html = fs.readFileSync(`${newPath}/index.html`, "utf-8")
-//     html = html.replace(/_next/g, "next")
-//     fs.writeFileSync(`${newPath}/index.html`, html)
-// } catch (error) {
-//     console.log(error)
-// }
-
+// GitHub Pages return 404 for file/folder names starting with underscore.
+const underScoreCorrectionRegex = /_(?=(next|app|index|error))/g;
 
 const machao = async (parent) => {
     // Our starting point
@@ -47,12 +33,13 @@ const machao = async (parent) => {
 
             if (stat.isFile()) {
                 let file = await fs.promises.readFile(fullpath, "utf-8")
-                file = file.replace(/_next/g, "next")
+                file = file.replace(underScoreCorrectionRegex, "")
                 await fs.promises.writeFile(fullpath, file)
             }
             else if (stat.isDirectory()) {
                 await machao(fullpath)
             }
+            await fs.promises.rename(fullpath, path.join(parent, file.replace(underScoreCorrectionRegex, "")))
         }
     }
     catch (e) {
