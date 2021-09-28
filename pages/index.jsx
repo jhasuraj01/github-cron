@@ -61,8 +61,11 @@ export async function getStaticProps() {
 //   const res = await fetch(`/api/hello`)
 //   const data = await res.json()
 
+    const date = new Date()
+    const time = date.toLocaleString('en-IN')
+
     const data = {
-        date: new Date().toString()
+        date: time
     }
 
   if (!data) {
