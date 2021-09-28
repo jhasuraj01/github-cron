@@ -24,6 +24,8 @@ jobs:
           npm run export
       - name: Commit and push changes
         run: |
+          git config --global user.name "jhamadhav"
+          git config --global user.email "jhamadhav28@gmail.com"
           git add -A
           git commit -m "New Build"
           git push
