@@ -1,0 +1,40 @@
+.main {
+    padding: 4em 1em;
+    max-width: 800px;
+    margin: auto;
+
+    .header {
+        margin-bottom: 4em;
+    }
+    h1, h2 {
+        font-weight: normal;
+    }
+    
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1em;
+    border-top: 4px solid #039be5;
+    background-color: #fff;
+}
+
+.quote {
+    position: relative; 
+    text-align: center;
+    padding: 1rem 1.2rem;
+    margin: 2em auto 4em;
+    background:
+        // linear-gradient(to right, #039be5 4px, transparent 4px) 0 100%,
+        // linear-gradient(to left, #039be5 4px, transparent 4px) 100% 0,
+        // linear-gradient(to bottom, #039be5 4px, transparent 4px) 100% 0,
+        // linear-gradient(to top, #039be5 4px, transparent 4px) 0 100%,
+        linear-gradient(to right, #039be5 4px, transparent 4px) 0 0,
+        linear-gradient(to left, #039be5 4px, transparent 4px) 100% 100%,
+        linear-gradient(to top, #039be5 4px, transparent 4px) 100% 100%,
+        linear-gradient(to bottom, #039be5 4px, transparent 4px) 0 0;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}

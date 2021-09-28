@@ -1,8 +1,8 @@
 name: Build project
 on:
   schedule:
-    # Runs "at minute 55 past every hour" (see https://crontab.guru)
-    - cron: '1/5 * * * *'
+    # Runs "at At 00:00." (see https://crontab.guru)
+    - cron: '0 0 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,8 +24,8 @@ jobs:
           npm run export
       - name: Commit and push changes
         run: |
-          git config --global user.name "jhamadhav"
-          git config --global user.email "jhamadhav28@gmail.com"
+          git config --global user.name "jhasuraj01"
+          git config --global user.email "44930179+jhasuraj01@users.noreply.github.com"
           git add -A
-          git commit -m "New Build"
+          git commit -m "New Auto Build"
           git push
