@@ -5,7 +5,7 @@ export default function Home({ timestamp, quote }) {
     return (
         <>
             <Head>
-                <title>GitHub Actions Auto Build Next.js APP with CRON JOB</title>
+                <title>GitHub Actions Auto Build and Deploy Next.js APP with CRON JOB</title>
                 <meta name="description" content="This Site Demonstrates how easily we can use Next.js and GitHub Actions to Create Sites with dynamic content and much more!" />
             </Head>
             <main className={styles.main}>
