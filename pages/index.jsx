@@ -20,7 +20,7 @@ export default function Home({ timestamp, quote }) {
 
             </main>
             <footer className={styles.footer}>
-                <span><b>Last Auto Build:</b> {new Date(timestamp).toString()}</span>, <a target="_blank" rel="noopener noreferrer" href="https://github.dev/jhasuraj01/github-cron">Source Code</a>
+                <span><b>Last Auto Build:</b> {new Date(timestamp).toString()}</span>, <a target="_blank" rel="noopener noreferrer" href="https://github.com/jhasuraj01/github-cron">Source Code</a>
             </footer>
         </>
     )
