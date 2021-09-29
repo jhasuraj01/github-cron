@@ -6,7 +6,7 @@ export default function Home({ timestamp, quote }) {
         <>
             <Head>
                 <title>GitHub Actions Auto Build and Deploy Next.js APP with CRON JOB</title>
-                <meta name="description" content="This is the Demonstration for how easily we can use Next.js and GitHub Actions to Create Sites with Dynamic content and schedule CRON Job for auto build at specific time/interval of time." />
+                <meta name="description" content="This is the Demonstration for how easily we can use Next.js and GitHub Actions to Create Sites with Dynamic content without any server and schedule CRON Job for auto build at specific time/interval of time." />
             </Head>
             <main className={styles.main}>
                 <header className={styles.header}>
@@ -16,7 +16,7 @@ export default function Home({ timestamp, quote }) {
                 <p>Today&apos;s Quote By {quote.author}</p>
                 <h2 className={styles.quote}><q>{quote.content}</q></h2>
 
-                <p className={styles.desc}>Quotes get Automatically updated daily, around 12:00 AM. This is the Demonstration for how easily we can use Next.js and GitHub Actions to Create Sites with Dynamic content and schedule <a target="_blank" rel="noopener noreferrer" href="https://crontab.guru/#0_0_*_*_*">CRON Job</a> for auto build at specific time/interval of time.</p>
+                <p className={styles.desc}>Quotes get Automatically updated daily, around 12:00 AM. This is the Demonstration for how easily we can use Next.js and GitHub Actions to Create Sites with Dynamic content <b>without any server</b> and schedule <a target="_blank" rel="noopener noreferrer" href="https://crontab.guru/#0_0_*_*_*">CRON Job</a> for auto build at specific time/interval of time.</p>
 
             </main>
             <footer className={styles.footer}>
