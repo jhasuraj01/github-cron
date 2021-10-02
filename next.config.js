@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  basePath: '/test-next-pages',
+  basePath: '/github-cron',
 }
